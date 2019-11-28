@@ -1,0 +1,8 @@
+package FirstClass;
+interface Log{
+   
+    void login();
+    void check(String uname,String pass);
+    String getUsername();
+    String getPassword();
+}

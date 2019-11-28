@@ -1,0 +1,48 @@
+package FirstClass;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+public class Login implements Log{
+    private String username;
+    private String password;
+    int a;
+    Login(){
+         JOptionPane.showMessageDialog(null, "Welcome to my System");
+        
+    }
+   
+    @Override
+  public void login(){
+        do{
+           username=JOptionPane.showInputDialog(null,"Enter your UserName");
+           password=JOptionPane.showInputDialog(null,"Enter your password"); 
+            check(username,password);
+            if (a==1) {
+              break;  
+            }
+        }while(a==0);
+       
+        
+}
+   
+    @Override
+    public void check(String uname,String pass){
+       try{
+        Integer.parseInt(pass);
+        a=1;
+    }catch(Exception e ){
+         a=0;
+    }
+        
+    }
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }

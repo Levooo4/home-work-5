@@ -1,0 +1,68 @@
+package FirstClass;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class SecClass {
+
+    Scanner E = new Scanner(System.in);
+
+    public static int pis = 10;
+
+    public void mainScreen() {
+
+        SecClass sc = new SecClass();
+        int lop = 0;
+        do {
+
+            String av = JOptionPane.showInputDialog(null, " Enter you want to do: \n 1.zyadkrdn \n 2.froshtn\n 3.darchun");
+            int a = Integer.parseInt(av);
+            switch (a) {
+                case 1:
+                    sc.zyadkrdn();
+                    break;
+
+                case 2:
+                    sc.froshtn();
+
+                    break;
+
+                case 3:
+                    lop = 0;
+                    break;
+            }
+            if (a != 3) {
+                System.out.println("bo garanawa bo main zhmara 1 daxl bka!!!!!");
+                lop = E.nextInt();
+            }
+
+        } while (lop == 1);
+        System.out.println("swpas hanasay paiz");
+    }
+
+    void zyadkrdn() {
+
+        String W = JOptionPane.showInputDialog(null, "Enter What you want to change");
+        int X = Integer.parseInt(W);
+        if (X == 1) {
+            System.out.println("You select Pis that all we have it : " + pis);
+            int p = E.nextInt();
+            pis = pis + p;
+            System.out.println("Your item have be vhange to : " + pis);
+        }
+
+    }
+
+    void froshtn() {
+
+        String W = JOptionPane.showInputDialog(null, "Enter What you want to change");
+        int X = Integer.parseInt(W);
+        if (X == 1) {
+            System.out.println("You select Pis that all we have it : " + pis);
+            int p = E.nextInt();
+            pis = pis - p;
+            System.out.println("Your item have be vhange to : " + pis);
+        }
+
+    }
+}

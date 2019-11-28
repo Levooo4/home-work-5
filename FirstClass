@@ -1,0 +1,29 @@
+package FirstClass;
+
+import javax.swing.JOptionPane;
+
+public class FirstClass extends Login {
+
+    FirstClass() {
+        super();
+        JOptionPane.showMessageDialog(null, "please enter your username and password");
+
+    }
+
+    public static void main(String[] args) {
+        FirstClass ob = new FirstClass();
+        Log ob1 = new Login();
+        ob1.login();
+        ob.checke(ob1.getUsername(), ob1.getPassword());
+    }
+
+    public void checke(String uname, String pass) {
+        if (uname.equals("livo") && pass.equals("123")) {
+            SecClass sc = new SecClass();
+            sc.mainScreen();
+        } else {
+            JOptionPane.showMessageDialog(null, "user name yan password halaya");
+        }
+    }
+
+}
